@@ -10,6 +10,9 @@ import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 import Blog from './components/Blog/Blog';
+import JobCategory from './components/JobCategory/JobCategory';
+import JobAndFeatureJob from './components/JobAndFeatureJob/JobAndFeatureJob';
+
 
 
 
@@ -20,7 +23,14 @@ const router =createBrowserRouter([
     children: [
       {
         path:'/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: JobAndFeatureJob
+       
+      },
+      {
+        path:'jobCategory',
+        element: <JobCategory></JobCategory>,
+       
       },
       {
         path:'statistics',

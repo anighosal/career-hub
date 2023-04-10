@@ -3,7 +3,7 @@ import { useState } from 'react'
 import viteLogo from '/vite.svg'
 
 import Home from './components/Home/Home'
-import Header from './components/Header/Header'
+import NavBar from './components/NavBar/NavBar'
 import { Outlet } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-     <Header></Header>
+    <NavBar></NavBar>
      <Outlet></Outlet>
      <Footer></Footer>
     
