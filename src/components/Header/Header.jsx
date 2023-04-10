@@ -3,7 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className='flex items-center justify-between px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-gray-100'>
+       <div className='bg-gray-100'>
+         <div className='flex items-center justify-between px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
           <Link>   <span className='font-extrabold text-3xl  bg-blend-color-burn '>BuildCareer</span>
           </Link>
           <ul className='items-center hidden space-x-8 lg:flex'>
@@ -40,11 +41,12 @@ const Header = () => {
              Blog
             </NavLink> </li>
           </ul>
-          <Link>
-          <button>Star Apply</button>
+          <Link className='bg-gradient-to-r from-indigo-500 to-indigo-400  px-5 py-3 rounded-xl'>
+          <button className='text-white font-semibold font-xl'>Star Applying</button>
           </Link>
 
         </div>
+       </div>
     );
 };
 
