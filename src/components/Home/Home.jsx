@@ -11,12 +11,12 @@ import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 
 const Home = () => {
-  const { jobCategory } = useLoaderData();
+  const { jobCategory, featureJob} = useLoaderData();
   return (
     <div>
       <Header></Header>
       <JobCategory jobCategory={jobCategory}></JobCategory>
-      <FeaturedJobs></FeaturedJobs>
+      <FeaturedJobs featureJob={featureJob}></FeaturedJobs>
     </div>
   );
 };
