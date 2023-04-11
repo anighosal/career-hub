@@ -12,6 +12,7 @@ import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 import Blog from './components/Blog/Blog';
 import JobCategory from './components/JobCategory/JobCategory';
 import JobAndFeatureJob from './components/JobAndFeatureJob/JobAndFeatureJob';
+import JobDetails from './components/JobDetails/JobDetails';
 
 
 
@@ -20,12 +21,18 @@ const router =createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+   
     children: [
       {
         path:'/',
         element: <Home></Home>,
         loader: JobAndFeatureJob
        
+      },
+      {
+        path:'job/:jobId',
+        element: <JobDetails></JobDetails>,
+        loader: () => fetch(`featurejob.json`)
       },
       {
         path:'jobCategory',
@@ -43,7 +50,8 @@ const router =createBrowserRouter([
       {
         path:'blog',
         element:<Blog></Blog>
-      }
+      },
+      
     ]
    
   }

@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollarSign } from '@fortawesome/free-solid-svg-icons'
 
 const Job = ({job}) => {
-    const {companyLogo, title,salary, location, workplace, jobType, company}=  job
+    const {companyLogo, title,salary, location, workplace, jobType, company,id}=  job
+
+
     return (
         <>
             
@@ -29,7 +31,7 @@ const Job = ({job}) => {
                       <small>Salary: {salary}</small>
 
                       </div>
-                      <Link>
+                      <Link to={`/job/${id}`}>
                       <button className='text-white font-semibold font-xl bg-gradient-to-r from-indigo-500 to-indigo-400  px-5 py-3  mt-4'>View Details</button>
                       </Link>
                       

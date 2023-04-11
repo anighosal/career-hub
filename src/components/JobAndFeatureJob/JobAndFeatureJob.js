@@ -3,7 +3,7 @@ const JobAndFeatureJob = async () => {
   const jobCategory = await loadCategory.json();
 
   // featurejob
-  const loadFeatureJob = await fetch("./featurejob.json");
+  const loadFeatureJob = await fetch("/featurejob.json");
   const featureJob = await loadFeatureJob.json();
   return {
     jobCategory,
