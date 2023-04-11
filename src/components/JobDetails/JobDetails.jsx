@@ -6,6 +6,7 @@ import { addToDb } from '../Utilities/fakedb';
 
 
 
+
 const JobDetails = () => {
     const [detailsJob, setDetailsJob] = useState({});
     const { jobId } = useParams()
