@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollarSign,faCashRegister, faPhone, faVoicemail} from '@fortawesome/free-solid-svg-icons'
+import { addToDb } from '../Utilities/fakedb';
 
 
 
@@ -15,7 +16,11 @@ const JobDetails = () => {
             setDetailsJob(details)
         }
     }, [jobId])
-    console.log(detailsJob)
+    const btnApplyNow = (id) => {
+       addToDb(id)
+    }
+
+   
     return (
         <div>
           <div  className='bg-gray-100 h-full'>
@@ -61,7 +66,7 @@ const JobDetails = () => {
             </div>
           
             </div>
-            <button>Apply Now</button>
+            <button onClick={ () => btnApplyNow(detailsJob.id)} className='text-white font-semibold font-xl bg-gradient-to-r from-indigo-500 to-indigo-400 w-[400px] py-3  mt-4'>Apply Now</button>
            </div>
            </div>
         </div>
