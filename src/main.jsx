@@ -4,6 +4,7 @@ import App from './App'
 import './index.css'
 import {
   createBrowserRouter,
+  Link,
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/Home/Home';
@@ -14,6 +15,7 @@ import JobCategory from './components/JobCategory/JobCategory';
 import JobAndFeatureJob from './components/JobAndFeatureJob/JobAndFeatureJob';
 import JobDetails from './components/JobDetails/JobDetails';
 import SingleJobDetail from './components/SingleJobDetail/SingleJobDetail';
+import ErrorPage from './components/ErrorPage';
 
 
 
@@ -27,9 +29,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+        
         loader: JobAndFeatureJob
 
       },
+   
       {
         path: 'job/:jobId',
         element: <JobDetails></JobDetails>,
@@ -57,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: 'blog',
         element: <Blog></Blog>
+      },
+      {
+        path:'*',
+        element: <ErrorPage></ErrorPage>
       },
 
     ]

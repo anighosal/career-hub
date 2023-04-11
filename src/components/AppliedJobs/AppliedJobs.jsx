@@ -22,9 +22,9 @@ const AppliedJobs = () => {
           </div>
 
            {
-            appliedJobs.map(singlejobdetail => <SingleJobDetail key={singlejobdetail.id}
-                singlejobdetail={singlejobdetail}
-            ></SingleJobDetail>
+            appliedJobs.map(singlejobdetail => <SingleJobDetail 
+                key={singlejobdetail.id} 
+                singlejobdetail={singlejobdetail}></SingleJobDetail>
                
              )
            }
