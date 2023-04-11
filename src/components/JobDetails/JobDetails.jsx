@@ -22,7 +22,7 @@ const JobDetails = () => {
 
     return (
         <div>
-            <div className='bg-gray-100 h-full'>
+            <div className='bg-gray-100 h-[200px]'>
                 <h1 className='text-center font-bold text-lg'>Job Details</h1>
             </div>
 
