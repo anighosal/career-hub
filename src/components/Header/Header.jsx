@@ -1,6 +1,8 @@
 import React from 'react';
 import imgCover from '../../assets/All Images/img.png'
 import { Link } from 'react-router-dom';
+import img1 from '../../assets/All Images/Vector-1.png';
+import img2 from '../../assets/All Images/Vector.png'
 
 const Header = () => {
     return (
@@ -14,10 +16,13 @@ const Header = () => {
            </div>
            <img  src={imgCover} alt="imgBanner" />
              </div>
+         
             
               
              
             </div>
+            <img  className='absolute top-0 right-0'  src={img1} alt="bannerimg" />
+          <img  className='absolute top-10 mt-80 pt-24 -left-8' src={img2} alt="" />
         </div>
     );
 };

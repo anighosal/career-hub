@@ -3,6 +3,8 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollarSign, faCashRegister, faPhone, faVoicemail } from '@fortawesome/free-solid-svg-icons'
 import { addToDb } from '../Utilities/fakedb';
+import img1 from '../../assets/All Images/Vector-1.png';
+import img2 from '../../assets/All Images/Vector.png'
 
 
 const JobDetails = () => {
@@ -22,9 +24,11 @@ const JobDetails = () => {
 
     return (
         <div>
-            <div className='bg-gray-100 h-[200px]'>
-                <h1 className='text-center font-bold text-lg'>Job Details</h1>
-            </div>
+              <div className='bg-gray-100 h-[248px] relative'>
+          <h1 className='text-center font-bold text-xl'> Applied Jobs</h1>
+          <img  className='absolute -top-24 -right-3'  src={img1} alt="bannerimg" />
+          <img  className='absolute' src={img2} alt="" />
+          </div>
 
 
             <div className='grid lg:grid-cols-2 mt-24 mx-auto container gap-20'>
