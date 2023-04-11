@@ -1,5 +1,5 @@
 import React from 'react';
-import imgCover from '../../assets/img.png'
+import imgCover from '../../assets/All Images/img.png'
 import { Link } from 'react-router-dom';
 
 const Header = () => {

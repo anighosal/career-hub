@@ -6,20 +6,22 @@ const JobAndFeatureJob = async () => {
 
   // featurejob
 
-  export const clickJobAndItem = async () => {
-    const loadFeatureJob = await fetch("featurejob.json");
-    const featureJob = await loadFeatureJob.json();
+  // featurejob
+  const loadFeatureJob = await fetch("/featurejob.json");
+  const featureJob = await loadFeatureJob.json();
 
-    const savedAppliedJobs = getStoredJob();
-    let newArr = [];
-    for (const id in savedAppliedJobs) {
-      const foundJob = jData.find((job) => job.id === id);
-      if (foundJob) {
-        newArr.push(foundJob);
-      }
-    }
-    return newArr;
-  };
+  // const clickJobAndItem = async () => {
+  //   const loadFeatureJob = await fetch("/featureJob.json");
+  //   const featureJob = await loadFeatureJob.json();
+
+  //   const savedAppliedJobs = getStoredJob();
+  //   for (const id in savedAppliedJobs) {
+  //     const foundJob = jData.find((job) => job.id === id);
+  //     if (foundJob) {
+  //       newArr.push(foundJob);
+  //     }
+  //   }
+  // };
 
   return {
     jobCategory,
@@ -27,4 +29,4 @@ const JobAndFeatureJob = async () => {
   };
 };
 
-// export default JobAndFeatureJob;
+export default JobAndFeatureJob;

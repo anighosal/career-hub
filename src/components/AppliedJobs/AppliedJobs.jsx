@@ -1,33 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { getStoredJob } from '../Utilities/fakedb';
 import { useLoaderData } from 'react-router-dom';
+import SingleJobDetail from '../SingleJobDetail/SingleJobDetail';
 
 const AppliedJobs = () => {
-    const [appliedJobs, setAppliedJobs] = useState([])
-    const jData = useLoaderData();
-   useEffect(() => {
-    const savedAppliedJobs = getStoredJob()
-    let newArr = []
-  
-   
-    for(const id in savedAppliedJobs){
-        const foundJob = jData.find(job => job.id === id)
-        if(foundJob) {
-            newArr.push(foundJob)
+    const jobData = useLoaderData();
+    const storedJobs = getStoredJob();
+    let appliedJobs = [];
+    for (const id in storedJobs) {
+        if (jobData.length) {
+            const foundJob = jobData.find(job => job.id === id);
+            appliedJobs.push(foundJob);
         }
-        
-   
-        
     }
-    setAppliedJobs(newArr)
-   }, [])
+    console.log(appliedJobs)
 
-
-  
-     
     return (
         <div>
-            Applied Jobs
+           <h1 className='text-center font-bold text-xl'> Applied Jobs</h1>
+
+           {
+            appliedJobs.map(singlejobdetail => <SingleJobDetail></SingleJobDetail> )
+           }
         </div>
     );
 };

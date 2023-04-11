@@ -13,49 +13,54 @@ import Blog from './components/Blog/Blog';
 import JobCategory from './components/JobCategory/JobCategory';
 import JobAndFeatureJob from './components/JobAndFeatureJob/JobAndFeatureJob';
 import JobDetails from './components/JobDetails/JobDetails';
+import SingleJobDetail from './components/SingleJobDetail/SingleJobDetail';
 
 
 
 
-const router =createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-   
+
     children: [
       {
-        path:'/',
+        path: '/',
         element: <Home></Home>,
         loader: JobAndFeatureJob
-       
+
       },
       {
-        path:'job/:jobId',
+        path: 'job/:jobId',
         element: <JobDetails></JobDetails>,
         loader: () => fetch('/featurejob.json')
       },
       {
-        path:'jobCategory',
+        path: 'jobCategory',
         element: <JobCategory></JobCategory>,
-       
+
       },
       {
-        path:'statistics',
+        path: 'statistics',
         element: <Statistics></Statistics>
       },
       {
-        path:'appliedjobs',
-        element:< AppliedJobs></AppliedJobs>,
+        path: 'appliedjobs',
+        element: < AppliedJobs></AppliedJobs>,
         loader: () => fetch('/featurejob.json')
 
       },
       {
-        path:'blog',
-        element:<Blog></Blog>
+        path:'singlejobdetail',
+        element: <SingleJobDetail></SingleJobDetail>
       },
-      
+      {
+        path: 'blog',
+        element: <Blog></Blog>
+      },
+
     ]
-   
+
   }
 ])
 
@@ -63,6 +68,6 @@ const router =createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
