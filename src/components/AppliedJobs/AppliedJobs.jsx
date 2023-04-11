@@ -17,10 +17,16 @@ const AppliedJobs = () => {
 
     return (
         <div>
-           <h1 className='text-center font-bold text-xl'> Applied Jobs</h1>
+          <div className='bg-gray-100 h-[200px]'>
+          <h1 className='text-center font-bold text-xl'> Applied Jobs</h1>
+          </div>
 
            {
-            appliedJobs.map(singlejobdetail => <SingleJobDetail></SingleJobDetail> )
+            appliedJobs.map(singlejobdetail => <SingleJobDetail key={singlejobdetail.id}
+                singlejobdetail={singlejobdetail}
+            ></SingleJobDetail>
+               
+             )
            }
         </div>
     );
