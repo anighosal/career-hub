@@ -10,6 +10,7 @@ import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 
 
+
 const Home = () => {
   const { jobCategory, featureJob} = useLoaderData();
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Header></Header>
       <JobCategory jobCategory={jobCategory}></JobCategory>
       <FeaturedJobs featureJob={featureJob}></FeaturedJobs>
+      
     </div>
   );
 };
