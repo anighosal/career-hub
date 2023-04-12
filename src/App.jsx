@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import viteLogo from '/vite.svg'
+
 
 import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar'
