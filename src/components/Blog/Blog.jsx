@@ -19,10 +19,11 @@ const Blog = () => {
             <h2 className='text-2xl font-bold text-red-500'>3: What is useRef?</h2>
             <h5 className='text-blue-400 text-lg font-medium'>Ans: useRef(initialValue) is a React hook that receives  one argument as the initial value called and returns a object called reference.</h5><br />
             <h2 className='text-2xl font-bold text-red-500'>4: What is useMemo?</h2>
+            <h5 className='text-blue-400 text-lg font-medium'>Ans: useMemo is a React hook that is used to memoize the result of a function</h5>
            
            
             
-            <h5 className='text-blue-400 text-lg font-medium'></h5>
+            
           </div>
           
         </div>

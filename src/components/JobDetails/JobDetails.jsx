@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot, faDollarSign, faCashRegister, faPhone, faVoicemail } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot, faDollarSign, faCashRegister, faPhone, faVoicemail} from '@fortawesome/free-solid-svg-icons'
 import { addToDb } from '../Utilities/fakedb';
 import img1 from '../../assets/All Images/Vector-1.png';
 import img2 from '../../assets/All Images/Vector.png'
